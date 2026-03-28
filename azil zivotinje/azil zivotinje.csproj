@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,22 +62,61 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
+    <Compile Include="Filtriranje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filtriranje.Designer.cs">
+      <DependentUpon>Filtriranje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Početna.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Početna.Designer.cs">
       <DependentUpon>Početna.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pregled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled.Designer.cs">
+      <DependentUpon>Pregled.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statistika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistika.Designer.cs">
+      <DependentUpon>Statistika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Udomljavanje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Udomljavanje.Designer.cs">
+      <DependentUpon>Udomljavanje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Unos Zivotinje.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Unos Zivotinje.Designer.cs">
       <DependentUpon>Unos Zivotinje.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Filtriranje.resx">
+      <DependentUpon>Filtriranje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Početna.resx">
       <DependentUpon>Početna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled.resx">
+      <DependentUpon>Pregled.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +127,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Statistika.resx">
+      <DependentUpon>Statistika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Udomljavanje.resx">
+      <DependentUpon>Udomljavanje.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Unos Zivotinje.resx">
       <DependentUpon>Unos Zivotinje.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +148,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

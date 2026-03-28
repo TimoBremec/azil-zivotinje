@@ -11,7 +11,7 @@ namespace azil_zivotinje
     {
         public static void Unos(string zapis)
         {
-            StreamWriter sw = new StreamWriter("aziil.txt", true);
+            StreamWriter sw = new StreamWriter("azilzivotinje.txt", true);
             sw.WriteLine(zapis);
             sw.Close();
         }
@@ -24,7 +24,7 @@ namespace azil_zivotinje
         public static List<string> Ucitaj()
         {
             List<string> lista = new List<string>();
-            StreamReader sr = new StreamReader("zivotinjeazil.txt");
+            StreamReader sr = new StreamReader("azilzivotinje.txt");
             string linija = sr.ReadLine();
 
             while (linija != null)
@@ -53,7 +53,7 @@ namespace azil_zivotinje
         public static List<string> Vrste()
         {
             List<string> lista = new List<string>();
-            StreamReader sr = new StreamReader("zivotinjeazil.txt");
+            StreamReader sr = new StreamReader("azilzivotinje.txt");
             string linija = sr.ReadLine();
 
             while (linija != null)
@@ -67,10 +67,10 @@ namespace azil_zivotinje
             return lista;
         }
 
-        public static List<string> PronadiPoVrsti(string kriterij)
+        public static List<string> SearchByVrsta(string kriterij)
         {
             List<string> lista = new List<string>();
-            StreamReader sr = new StreamReader("zivotinjeazil.txt");
+            StreamReader sr = new StreamReader("azilzivotinje.txt");
             string linija = sr.ReadLine();
             while (linija != null)
             {
@@ -87,7 +87,7 @@ namespace azil_zivotinje
         public static double ProsjecnaDob()
         {
             List<string> lista = new List<string>();
-            StreamReader sr = new StreamReader("zivotinjeazil.txt");
+            StreamReader sr = new StreamReader("azilzivotinje.txt");
             string linija = sr.ReadLine();
             int brojac = 0;
             int suma = 0;
