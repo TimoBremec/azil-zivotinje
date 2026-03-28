@@ -22,16 +22,17 @@ namespace azil_zivotinje
 
         }
 
+        /// Ovdje se učitavaju sve potrebne informacije o azilu i prikazuju se u listboxu
         private void Statistika_Load(object sender, EventArgs e)
         {
-            List<string> lista = Admin.Ucitaj();
+            List<string> lista = Admin.Load();
             int brojac = 0;
             foreach (string linija in lista)
             {
                 brojac++;
             }
             listBox1.Items.Add("Ukupan broj zivotinja u azilu je " + brojac);
-            List<string> Udomitelj = Admin.UcitajUdomitelje();
+            List<string> Udomitelj = Admin.UcitajSveUdomitelje();
             int brojac2 = 0;
             foreach (string linija in Udomitelj)
             {
@@ -41,7 +42,7 @@ namespace azil_zivotinje
             listBox1.Items.Add("Broj trenutno prisutnih zivotinja u nasem azilu je " + (brojac - brojac2));
             listBox1.Items.Add("Prosjecna dob zivotinja u nasem azilu je " + Admin.ProsjecnaDob());
             listBox1.Items.Add("Broj zivotinja po vrstama: ");
-            foreach (string linija in Admin.Vrste())
+            foreach (string linija in Admin.BrojVrsta())
             {
                 listBox1.Items.Add(linija);
 

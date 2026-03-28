@@ -19,10 +19,11 @@ namespace azil_zivotinje
         int i = 0;
 
 
-
+        //Ovdje se učitavaju sve potrebne informacije o zivotinjama u azilu i prikazuju se u textboxovima i pictureboxu,
+        //a pomocu botuna "dalje" i "natrag" mozemo pregledavati sve zivotinje u azilu
         private void button2_Click(object sender, EventArgs e)
         {
-            List<string> lista = Admin.Ucitaj();
+            List<string> lista = Admin.Load();
             i--;
             if (i >= 0)
             {
@@ -57,7 +58,7 @@ namespace azil_zivotinje
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<string> lista = Admin.Ucitaj();
+            List<string> lista = Admin.Load();
             i++;
             if (i < lista.Count)
             {
@@ -90,10 +91,10 @@ namespace azil_zivotinje
             }
 
         }
-
+        
         private void Pregled_Load(object sender, EventArgs e)
         {
-            List<string> lista = Admin.Ucitaj();
+            List<string> lista = Admin.Load();
             foreach (string linija in lista)
             {
                 listBox1.Items.Add(linija.Replace('|', ' '));

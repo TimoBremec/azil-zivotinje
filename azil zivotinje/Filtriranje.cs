@@ -12,6 +12,7 @@ namespace azil_zivotinje
 {
     public partial class Filtriranje : Form
     {
+        //Ovdje se nalaze funkcionalnosti za filtriranje zivotinja u azilu po odredjenim kriterijima,
         public Filtriranje()
         {
             InitializeComponent();
@@ -34,11 +35,11 @@ namespace azil_zivotinje
 
             }
         }
-
+        
         private void button2_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
-            List<string> lista = Admin.Ucitaj();
+            List<string> lista = Admin.Load();
             foreach (string linija in lista)
             {
                 listBox1.Items.Add(linija.Replace('|', ' '));

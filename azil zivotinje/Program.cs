@@ -16,7 +16,7 @@ namespace azil_zivotinje
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Početna());
+            Application.Run(new Login());
         }
     }
 }

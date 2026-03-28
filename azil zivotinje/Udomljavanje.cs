@@ -16,19 +16,27 @@ namespace azil_zivotinje
         {
             InitializeComponent();
         }
+        //deklaracija varijable z koja ce nam sluziti za spremanje indeksa zivotinje koju zelimo udomiti,
+        //a zatim je ukloniti iz listboxa i datoteke azilzivotinje.txt
         int z = 0;
+        //Ovdje se učitavaju sve potrebne informacije o zivotinjama u azilu i prikazuju se u listboxu
         private void Udomljavanje_Load(object sender, EventArgs e)
         {
-            List<string> lista = Admin.Ucitaj();
+            List<string> lista = Admin.Load();
             foreach (string linija in lista)
             {
                 lstbox1.Items.Add(linija.Replace('|', ' '));
             }
         }
-        private void NaseZivotinje_DoubleClick(object sender, EventArgs e)
+        //Double clickom udomimo zivotinju, uklanjamo je iz listboxa i spremamo podatke o udomitelju u datoteku udomitelji.txt,
+        //a zivotinja se uklanja iz datoteke azilzivotinje.txt
+        private void lstbox1_DoubleClick(object sender, EventArgs e)
         {
             z = lstbox1.SelectedIndex;
+            
+           
         }
+        
         private void button1_Click(object sender, EventArgs e)
         {
             lstbox1.Items.RemoveAt(z);

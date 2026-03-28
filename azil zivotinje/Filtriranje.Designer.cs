@@ -42,7 +42,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(181, 36);
             this.button2.TabIndex = 9;
-            this.button2.Text = "Osvjezi";
+            this.button2.Text = "Prikazi sve";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -52,7 +52,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 36);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Pretraži";
+            this.button1.Text = "Pretraži po vrsti";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

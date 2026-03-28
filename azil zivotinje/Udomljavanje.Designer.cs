@@ -42,12 +42,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(110, 328);
+            this.label4.Location = new System.Drawing.Point(57, 262);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(244, 13);
+            this.label4.Size = new System.Drawing.Size(346, 13);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Pritisnite dva puta na zivotinju koju bi htjeli udomiti!";
+            this.label4.Text = "Odaberite zivotinju koju biste htjeli udomiti, zatim pritisnite botun \"Udomi\"";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // lstbox1

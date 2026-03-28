@@ -12,6 +12,7 @@ namespace azil_zivotinje
 {
     public partial class Unos_Zivotinje : Form
     {
+        //Ovdje se unose sve potrebne informacije o zivotinji i spremaju se u datoteku azilzivotinje.txt, a slika se sprema u folder Debug unutar projekta
         public Unos_Zivotinje()
         {
             InitializeComponent();
@@ -60,7 +61,7 @@ namespace azil_zivotinje
             cbKast.Checked = false;
             txtNapomena.Clear();
         }
-
+        //Otvori dijalog za odabir slike (korisnici/Timo/Source/repos/azil-zivotinje/azil zivotinje/bin/Debug) i učitava je u picturebox
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
